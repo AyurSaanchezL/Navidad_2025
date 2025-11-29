@@ -1,0 +1,324 @@
+/* @keyframes contentReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(50px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Modern antiqua', sans;
+    background: url('res/main_background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* animation: contentReveal 1s ease-out 0.8s backwards; */
+}
+
+.autor {
+    font-size: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 52.5%;
+    width: 60px;
+    transform: translateX(-50%);
+    text-shadow: 0 0 20px gold;
+    text-align: center;
+    writing-mode: horizontal-tb;
+}
+
+header {
+    height: 90px;
+    box-sizing: content-box;
+    padding: 10px 30px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 0.2) 85%, transparent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    color: gold;
+    font-size: 25px;
+    text-shadow: 1px 1px 8px rgb(50, 50, 112);
+    letter-spacing: 2px;
+}
+
+.span1 {
+    text-decoration: underline wavy goldenrod 1.5px;
+}
+
+.span2 {
+    animation: switchColor 5s infinite ease-in-out;
+}
+
+.play-pause {
+    margin-left: 50px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(50, 50, 112, .5);
+}
+
+#musicBall {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 18% 53%, rgba(255, 215, 0, 0.4), rgba(255, 237, 138, 0.45) 20%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 250, 225, 1));
+    border-radius: 50%;
+    position: absolute;
+    border: 1px solid #ffffff44;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#musicBall .hook {
+    width: 15px;
+    height: 7.5px;
+    background-color: rgb(204, 179, 89);
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4) inset;
+    border: 1px solid #a3a3a377;
+}
+
+#musicBall .thread {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    height: 25px;
+    width: 1.5px;
+    background: linear-gradient(to bottom,
+            #eaeaea 0%,
+            #F5F5F5 40%,
+            rgba(255, 255, 255, 0.5) 70%,
+            rgba(255, 217, 0, 0.836) 80%,
+            gold 100%);
+    z-index: 15;
+}
+
+#musicBall:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 35px rgba(248, 199, 22, 0.75);
+    text-shadow: 1px 1px 8px rgba(50, 50, 112, 1);
+}
+
+
+@keyframes switchColor {
+    0% {
+        color: #FFD700;
+        text-shadow: 0 0 10px #FFD700,
+            0 0 30px #FFD700;
+    }
+
+    25% {
+        color: #ffed88;
+        text-shadow: 0 0 8px rgb(255, 237, 136),
+            0 0 20px rgba(255, 237, 136, 0.7);
+    }
+
+    50% {
+        color: #FFFFFF;
+        text-shadow: 0 0 8px #FFFFFF,
+            0 0 20px #FFFFFF;
+    }
+
+    75% {
+        color: #ffed88;
+        text-shadow: 0 0 8px rgb(255, 237, 136),
+            0 0 20px rgba(255, 237, 136, 0.7);
+    }
+
+    100% {
+        color: #FFD700;
+        text-shadow: 0 0 10px #FFD700,
+            0 0 30px #FFD700;
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+img {
+    height: auto;
+    width: 1150px;
+    padding: 50px 35px 0 35px;
+}
+
+.ball {
+    width: 170px;
+    height: 170px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2) 30%, rgba(100, 100, 200, 0.5) 70%, rgba(0, 0, 100, 0.8));
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ball:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.hook {
+    width: 30px;
+    height: 15px;
+    background-color: silver;
+    border-radius: 5px 5px 0 0;
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3) inset;
+    border: 1px solid #aaa;
+}
+
+.inner-shine {
+    width: 40%;
+    height: 40%;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.7) 10%, transparent 80%);
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    opacity: 0.8;
+}
+
+.message {
+    width: 150px;
+    position: relative;
+    overflow: hidden;
+    text-wrap: pretty;
+    padding: 5px 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0;
+    border-radius: 20px;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 20;
+}
+
+.ball.clicked .message {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* 1. Ocultar el checkbox original */
+.toggle-checkbox {
+    display: none;
+}
+
+/* 2. Estilo para el área clickeable (label) */
+.click-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 15;
+    cursor: pointer;
+}
+
+/* 3. Mostrar el mensaje cuando el checkbox está CHECKED */
+/*
+   Explicación: Cuando el checkbox (input.toggle-checkbox) está :checked,
+   selecciona su HERMANO GENERAL (~) con la clase .message, y aplica los estilos.
+*/
+.toggle-checkbox:checked~.message {
+    pointer-events: auto;
+    z-index: 30;
+    animation: mssg 3s ease-in-out normal;
+}
+
+@keyframes mssg {
+    0% {
+        opacity: 0.5;
+    }
+
+    25%,
+    50%,
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#ball0 {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.9);
+
+    right: 38%;
+    top: 31%;
+}
+
+#ball0 .message,
+#ball2 .message,
+#ball3 .message {
+    color: red;
+    text-shadow: 1px 1px 8px gold;
+}
+
+#ball1 .message,
+#ball4 .message {
+    color: green;
+    text-shadow: 1px 1px 8px white;
+}
+
+#ball1 {
+    background-color: rgba(248, 199, 22, 0.9);
+    box-shadow: 0 0 20px #ffe552aa;
+    left: 25%;
+    top: 38.5%;
+}
+
+#ball2 {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.9);
+    right: 18.9%;
+    top: 54.5%;
+}
+
+#ball3 {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.9);
+    left: 25%;
+    top: 61%;
+}
+
+#ball4 {
+    background-color: rgba(248, 199, 22, 0.9);
+    box-shadow: 0 0 20px #ffe552aa;
+    right: 37%;
+    top: 73.7%;
+}

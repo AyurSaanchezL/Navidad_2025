@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseos</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=play_pause" />
+    <link rel="stylesheet" href="main_style.css">
+</head>
+
+<body>
+    <header>
+        <p>¡Clickea las <span class="span1">bolas</span> para <span class="span2">descubrir</span> los <span
+                class="span1">regalos</span>!</p>
+        <button class="play-pause" id="btnMusic">
+            <div class="ball" id="musicBall">
+                <span class="material-symbols-outlined">play_pause</span>
+                <div class="thread"></div>
+                <div class="hook"></div>
+                <div class="inner-shine"></div>
+            </div>
+        </button>
+    </header>
+
+    <div class="content">
+        <img src="res/tree.png" alt="arbol" class="tree">
+        <!-- BOLA 0 -->
+        <div class="ball musicBall" id="ball0">
+            <input type="checkbox" id="toggle-ball0" class="toggle-checkbox">
+
+            <label for="toggle-ball0" class="click-area"></label>
+            <div class="hook"></div>
+            <div class="inner-shine"></div>
+            <div class="message">Aprender a conducir</div>
+        </div>
+        <!------------------------------------------------------------ BOLA 1 -->
+        <div class="ball" id="ball1">
+            <input type="checkbox" id="toggle-ball1" class="toggle-checkbox">
+
+            <label for="toggle-ball1" class="click-area"></label>
+
+            <div class="hook"></div>
+            <div class="inner-shine"></div>
+            <div class="message">Familia feliz etc</div>
+        </div>
+        <!------------------------------------------------------------ BOLA 2 -->
+        <div class="ball" id="ball2">
+            <input type="checkbox" id="toggle-ball2" class="toggle-checkbox">
+
+            <label for="toggle-ball2" class="click-area"></label>
+
+            <div class="hook"></div>
+            <div class="inner-shine"></div>
+            <div class="message">Gatos fuertes y sanos</div>
+        </div>
+        <!------------------------------------------------------------ BOLA 3 -->
+        <div class="ball" id="ball3">
+            <input type="checkbox" id="toggle-ball3" class="toggle-checkbox">
+
+            <label for="toggle-ball3" class="click-area"></label>
+
+            <div class="hook"></div>
+            <div class="inner-shine"></div>
+            <div class="message">Que me toque la lotería (ya va tocando)</div>
+        </div>
+        <!------------------------------------------------------------ BOLA 4 -->
+        <div class="ball" id="ball4">
+            <input type="checkbox" id="toggle-ball4" class="toggle-checkbox">
+
+            <label for="toggle-ball4" class="click-area"></label>
+
+            <div class="hook"></div>
+            <div class="inner-shine"></div>
+            <div class="message">Nada más. Muchas gracias jojojo!</div>
+        </div>
+        <p class="autor">Ayur S.L 2050</p>
+    </div>
+    <audio src="res/cancion_main.mp3" id="song"></audio>
+    <script src="scripts/script_main.js"></script>
+</body>
+
+</html>
