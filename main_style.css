@@ -1,24 +1,29 @@
-/* @keyframes contentReveal {
+@keyframes contentReveal {
     0% {
         opacity: 0;
-        transform: translateY(50px) scale(0.9);
+        background-size: 200%;
     }
+
     100% {
         opacity: 1;
-        transform: translateY(0) scale(1);
+        background-size: 100%;
     }
-} */
+}
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Modern antiqua', sans;
-    background: url('res/main_background.jpg') no-repeat center center fixed;
+    background: url('res/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    /* animation: contentReveal 1s ease-out 0.8s backwards; */
+    background-position: top;
+    animation: contentReveal 1s ease-out 0.8s backwards;
 }
 
 .autor {
+    color: rgba(255, 215, 0, .69);
     font-size: 10px;
     position: absolute;
     bottom: 0;
@@ -34,7 +39,7 @@ header {
     height: 90px;
     box-sizing: content-box;
     padding: 10px 30px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 10%, rgba(255, 255, 255, 0.2) 85%, transparent);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.2) 85%, transparent);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -44,9 +49,9 @@ header {
 }
 
 p {
-    color: gold;
+    color: green;
     font-size: 25px;
-    text-shadow: 1px 1px 8px rgb(50, 50, 112);
+    text-shadow: 1px 1px 8px rgb(209, 209, 248);
     letter-spacing: 2px;
 }
 
@@ -117,6 +122,16 @@ p {
     transform: translateY(-2px) scale(1.05);
     box-shadow: 0 0 35px rgba(248, 199, 22, 0.75);
     text-shadow: 1px 1px 8px rgba(50, 50, 112, 1);
+}
+
+.msgMusica {
+    margin-left: 30px;
+    color: wheat;
+    font-size: 16px;
+}
+
+.music {
+    font-size: 20px;
 }
 
 
@@ -274,14 +289,6 @@ img {
     }
 }
 
-#ball0 {
-    background-color: rgba(255, 255, 255, .9);
-    box-shadow: 0 0 20px rgba(225, 225, 225, 0.9);
-
-    right: 38%;
-    top: 31%;
-}
-
 #ball0 .message,
 #ball2 .message,
 #ball3 .message {
@@ -294,6 +301,14 @@ img {
     color: green;
     text-shadow: 1px 1px 8px white;
 }
+
+#ball0 {
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 20px rgba(225, 225, 225, 0.9);
+    right: 38%;
+    top: 31%;
+}
+
 
 #ball1 {
     background-color: rgba(248, 199, 22, 0.9);
