@@ -169,7 +169,10 @@ body.opening a {
         opacity: 0;
         transform: scale(0);
     }
- {
+}
+
+a:link,
+a:visited {
     color: rgb(43, 98, 215);
 }
 
@@ -191,14 +194,6 @@ a:active {
     75% {
         transform: scale(0.95);
         box-shadow: 1px 1px 45px white;
-    }
-
-    50% {
-        transform: scale(1.05);
-        box-shadow: 1px 1px 30px white;
-    }
-}
-box-shadow: 1px 1px 45px white;
     }
 
     50% {
